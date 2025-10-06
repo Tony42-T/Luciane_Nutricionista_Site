@@ -1,2 +1,1 @@
-# Luciane_Nutricionista_Site
- Portifólio ePlanos de nutrição.
+© 2025 Tony cleyton gonçalves de jesus. Todos os direitos reservados.
