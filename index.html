@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dra. Luciane Gonçalves da silva — Nutricionista Clínica & Funcional</title>
+  <meta name="description" content="Nutrição prática e baseada em ciência. Consultas presenciais e online — planos personalizados e receitas." />
+
+  <!-- Link para seu CSS (vou gerar esse arquivo quando você pedir) -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Tailwind CDN: útil para prototipagem rápida. Pode remover se preferir CSS próprio. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-white via-amber-50 to-white text-slate-800">
+
+  <!-- ========== HEADER ========== -->
+  <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-12 h-12 rounded-lg bg-gradient-to-tr from-amber-400 to-rose-400 flex items-center justify-center text-white font-semibold">
+        AS
+      </div>
+      <div>
+        <div class="text-lg font-bold">Dra. Luciane Gonçalves da silva</div>
+        <div class="text-sm text-slate-600">Nutricionista Clínica & Funcional</div>
+      </div>
+    </div>
+
+    <!-- Nav desktop -->
+    <nav id="nav-menu" class="hidden md:flex gap-6 items-center text-slate-700">
+      <a href="#sobre" class="hover:text-amber-600">Sobre</a>
+      <a href="#servicos" class="hover:text-amber-600">Serviços</a>
+      <a href="#depoimentos" class="hover:text-amber-600">Depoimentos</a>
+      <a href="#blog" class="hover:text-amber-600">Blog</a>
+      <a href="#contato" class="px-4 py-2 bg-amber-500 text-white rounded-lg shadow">Agendar</a>
+    </nav>
+
+    <!-- Botão mobile -->
+    <button id="btn-mobile" aria-label="Abrir menu" class="md:hidden px-2 py-1 border rounded">
+      ☰
+    </button>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        Nutrição prática e baseada em ciência — para mais energia e bem-estar.
+      </h1>
+      <p class="mt-4 text-slate-700 max-w-xl">
+        Ajudo pessoas a reconectar com a alimentação, recuperar energia e criar hábitos sustentáveis com planos personalizados.
+      </p>
+
+      <div class="mt-6 flex gap-4">
+        <a href="#contato" class="inline-flex items-center gap-2 bg-amber-500 text-white px-5 py-3 rounded-lg font-medium shadow hover:brightness-95">Agendar Consulta</a>
+        <a href="#blog" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border">Ver Receitas</a>
+      </div>
+
+      <div class="mt-6 flex items-center gap-4 text-slate-600">
+        <div class="text-sm">Atendo presencial e online • São Paulo, BR</div>
+      </div>
+    </div>
+
+    <div class="flex justify-center md:justify-end">
+      <div class="w-128 h-128 rounded-2xl bg-slate-100 overflow-hidden shadow-lg">
+        <!-- coloque sua foto em assets/images/profile.jpg -->
+        <img src="assets/images/luciane-goncalves.png" alt="Foto da nutricionista" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SOBRE ========== -->
+  <section id="sobre" class="max-w-6xl mx-auto px-6 py-8">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-2xl font-bold">Sobre mim</h2>
+        <p class="mt-4 text-slate-700">
+          Olá — sou a Dra. Luciane Gonçalves da silva, formada em Nutrição com especialização em Nutrição Clínica e Funcional.
+          Trabalho com avaliação individualizada, planos alimentares e reeducação alimentar.
+        </p>
+        <ul class="mt-4 space-y-2 text-slate-700">
+          <li>• Atendimento presencial e online</li>
+          <li>• Planos personalizados e baseados em exames</li>
+          <li>• Receitas práticas e orientadas para sua rotina</li>
+        </ul>
+        <a href="#contato" class="mt-6 inline-block px-5 py-3 bg-amber-100 rounded-lg">Quero agendar</a>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow">
+        <h3 class="font-semibold">Formação & Certificações</h3>
+        <ul class="mt-3 text-sm text-slate-600 space-y-2">
+          <li>• Graduação em Nutrição — Universidade X</li>
+          <li>• Especialização em Nutrição Funcional — Instituto Y</li>
+          <li>• Curso de Terapia Nutricional e Suporte</li>
+        </ul>
+        <div class="mt-4 text-sm text-slate-500">CRN: 000000</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVIÇOS (visível no index; depois podemos separar em arquivo) ========== -->
+  <section id="servicos" class="max-w-6xl mx-auto px-6 py-8">
+    <h2 class="text-2xl font-bold">Serviços / Consultas</h2>
+    <p class="text-slate-700 mt-2">Atendimento personalizado com foco em resultado e bem-estar.</p>
+
+    <div class="mt-6 grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl p-6 shadow">
+        <h4 class="font-semibold">Consulta Nutricional Individual</h4>
+        <p class="mt-3 text-slate-600">Avaliação completa com plano alimentar personalizado.</p>
+        <div class="mt-4 flex items-center justify-between">
+          <div class="font-semibold">R$ 180</div>
+          <a href="#contato" class="text-amber-600">Agendar</a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow">
+        <h4 class="font-semibold">Acompanhamento Mensal</h4>
+        <p class="mt-3 text-slate-600">4 encontros com ajustes, cardápios e suporte constante.</p>
+        <div class="mt-4 flex items-center justify-between">
+          <div class="font-semibold">R$ 600</div>
+          <a href="#contato" class="text-amber-600">Agendar</a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow">
+        <h4 class="font-semibold">Plano Alimentar para Emagrecimento</h4>
+        <p class="mt-3 text-slate-600">Estratégias seguras e eficazes para perda de gordura.</p>
+        <div class="mt-4 flex items-center justify-between">
+          <div class="font-semibold">A partir de R$ 220</div>
+          <a href="#contato" class="text-amber-600">Agendar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DEPOIMENTOS ========== -->
+  <section id="depoimentos" class="max-w-6xl mx-auto px-6 py-8">
+    <h2 class="text-2xl font-bold">Depoimentos</h2>
+    <div class="mt-6 grid md:grid-cols-3 gap-4">
+      <blockquote class="bg-white p-6 rounded-xl shadow">
+        <p class="text-slate-700">“A Dra. Luciane Gonçalves Da Silva transformou minha relação com a comida — nunca me senti tão disposta!”</p>
+        <footer class="mt-4 text-sm text-slate-500">— Mariana R.</footer>
+      </blockquote>
+      <blockquote class="bg-white p-6 rounded-xl shadow">
+        <p class="text-slate-700">“Perdi 8kg com acompanhamento humano e prático. Recomendo!”</p>
+        <footer class="mt-4 text-sm text-slate-500">— Carlos M.</footer>
+      </blockquote>
+      <blockquote class="bg-white p-6 rounded-xl shadow">
+        <p class="text-slate-700">“Receitas fáceis e planos que cabem na rotina. Atendimento excelente.”</p>
+        <footer class="mt-4 text-sm text-slate-500">— Beatriz F.</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ========== BLOG (resumo) ========== -->
+  <section id="blog" class="max-w-6xl mx-auto px-6 py-8">
+    <div class="flex items-center justify-between">
+      <h2 class="text-2xl font-bold">Blog / Receitas</h2>
+      <a href="#blog" class="text-amber-600">Ver tudo</a>
+    </div>
+
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <article class="bg-white rounded-xl p-6 shadow">
+        <div class="text-sm text-slate-500">12 set 2025</div>
+        <h3 class="mt-2 font-semibold text-lg">5 Receitas rápidas e nutritivas para a semana</h3>
+        <p class="mt-2 text-slate-700">Sugestões práticas para montar marmitas balanceadas e ganhar tempo.</p>
+        <div class="mt-4"><a class="text-amber-600">Ler mais →</a></div>
+      </article>
+
+      <article class="bg-white rounded-xl p-6 shadow">
+        <div class="text-sm text-slate-500">5 jul 2025</div>
+        <h3 class="mt-2 font-semibold text-lg">Como interpretar resultados de exames de rotina</h3>
+        <p class="mt-2 text-slate-700">Um guia simples para entender glicemia, colesterol e marcadores inflamatórios.</p>
+        <div class="mt-4"><a class="text-amber-600">Ler mais →</a></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========== CONTATO / AGENDAMENTO ========== -->
+  <section id="contato" class="max-w-6xl mx-auto px-6 py-12">
+    <div class="bg-gradient-to-r from-amber-50 to-white rounded-2xl p-8 shadow grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-2xl font-bold">Contato / Agendamento</h2>
+        <p class="mt-2 text-slate-700">Preencha o formulário ou envie mensagem pelas redes sociais.</p>
+        <div class="mt-4 space-y-3 text-slate-600">
+          <div>📧 contato@seudominio.com</div>
+          <div>📱 +55 11 9XXXX-XXXX</div>
+          <div class="mt-4 flex gap-3">
+            <a href="#" class="px-3 py-2 rounded-lg border">Instagram</a>
+            <a href="#" class="px-3 py-2 rounded-lg border">LinkedIn</a>
+            <a href="#" class="px-3 py-2 rounded-lg border">Facebook</a>
+          </div>
+        </div>
+      </div>
+
+      <form action="https://formsubmit.co/your-email@example.com" method="POST" class="space-y-4 bg-white rounded-xl p-6 shadow">
+        <input type="hidden" name="_subject" value="Novo agendamento via site" />
+        <div>
+          <label class="text-sm">Nome</label>
+          <input name="name" required class="w-full mt-1 px-3 py-2 border rounded-lg" />
+        </div>
+        <div>
+          <label class="text-sm">Email</label>
+          <input name="email" type="email" required class="w-full mt-1 px-3 py-2 border rounded-lg" />
+        </div>
+        <div>
+          <label class="text-sm">Telefone</label>
+          <input name="phone" class="w-full mt-1 px-3 py-2 border rounded-lg" />
+        </div>
+        <div>
+          <label class="text-sm">Mensagem / Observações</label>
+          <textarea name="message" rows="4" class="w-full mt-1 px-3 py-2 border rounded-lg"></textarea>
+        </div>
+        <div class="flex justify-end">
+          <button type="submit" class="px-5 py-2 bg-amber-500 text-white rounded-lg">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="max-w-6xl mx-auto px-6 py-8 text-slate-600">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <div class="font-semibold">Dra. Luciane Gonçalves da silva</div>
+        <div class="text-sm">Nutricionista Clínica & Funcional • São Paulo, BR</div>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+    <div class="mt-6 text-sm text-slate-400">© 2025 Dra. Luciane Gonçalves da silva. Todos os direitos reservados.</div>
+  </footer>
+
+  <!-- ======= Script mínimo para menu mobile (mover para js/main.js depois) ======= -->
+  <script>
+    (function () {
+      const btn = document.getElementById('btn-mobile');
+      const menu = document.getElementById('nav-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', function () {
+        // alterna exibição do menu no mobile
+        menu.classList.toggle('hidden');
+      });
+    })();
+  </script>
+</body>
+</html>
