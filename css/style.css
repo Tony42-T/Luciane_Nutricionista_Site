@@ -46,7 +46,7 @@ section {
 --------------------------------*/
 header {
   background: rgba(87, 200, 77);
-  border-bottom: 1px solid #f3f4f6;
+  border-bottom: 3px solid #f3f4f6;
   position: sticky;
   top: 0;
   z-index: 50;
