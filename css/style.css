@@ -45,7 +45,7 @@ section {
    HEADER
 --------------------------------*/
 header {
-  background: #ffffff;
+  background: rgba(87, 200, 77);
   border-bottom: 1px solid #f3f4f6;
   position: sticky;
   top: 0;
@@ -53,6 +53,7 @@ header {
 }
 
 header nav a {
+  font-size: 1.5rem;
   text-decoration: none;
   font-weight: 500;
   color: #475569;
@@ -60,7 +61,7 @@ header nav a {
 }
 
 header nav a:hover {
-  color: #f59e0b; /* amber-500 */
+  color: rgb(0, 0, 0); /* amber-500 */
 }
 
 /* Mobile nav */
@@ -72,9 +73,9 @@ header nav a:hover {
   #nav-menu {
     display: none;
     flex-direction: column;
-    background: white;
+    background: rgb(131, 212, 117);
     position: absolute;
-    top: 70px;
+    top: 90px;
     right: 20px;
     padding: 1rem;
     border-radius: 8px;
@@ -88,7 +89,6 @@ header nav a:hover {
 
   #btn-mobile {
     display: block;
-    margin-top: 100px;
   }
 }
 
