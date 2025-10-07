@@ -83,7 +83,7 @@ header nav a:hover {
 
   #nav-menu.show {
     display: flex;
-    margin-top: 20%;
+    margin-top: 80px;
   }
 
   #btn-mobile {
