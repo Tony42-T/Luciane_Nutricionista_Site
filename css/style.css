@@ -74,7 +74,7 @@ header nav a:hover {
     flex-direction: column;
     background: white;
     position: absolute;
-    top: 80px;
+    top: 70px;
     right: 20px;
     padding: 1rem;
     border-radius: 8px;
@@ -83,6 +83,7 @@ header nav a:hover {
 
   #nav-menu.show {
     display: flex;
+    margin-top: 20%;
   }
 
   #btn-mobile {
