@@ -193,19 +193,10 @@ blockquote::before {
 /* -------------------------------
    FORMULÁRIO
 --------------------------------*/
-form{
-  width: 90%;
-  max-width: 500px; /* limita o tamanho no desktop */
-  margin: 0 auto; /* centraliza */
-  padding: 1rem;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
 form input,
 form textarea {
   width: 100%;
+  max-width: 500px;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 0.75rem;
