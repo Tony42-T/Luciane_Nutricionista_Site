@@ -61,7 +61,7 @@ header nav a {
 }
 
 header nav a:hover {
-  color: rgba(255, 255, 255, 0.534); /* amber-500 */
+  color: rgb(255, 255, 255); /* amber-500 */
 }
 
 /* Mobile nav */
