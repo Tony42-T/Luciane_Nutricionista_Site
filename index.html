@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="icon" href="https://www.dropbox.com/scl/fi/375h6hinca7m0y1t9esdc/Luciane_nutricionista_Logo.jpeg?rlkey=9at61y313d1eyd9epf1mogsbh&st=fbjrcak8&raw=1" type="image/png">
+  <link rel="icon" href="Assets/Images/Logo.png" type="image/png" class="logo">
 
   <title>Luciane Gonçalves — Nutricionista Clínica & Funcional</title>
   <meta name="description" content="Nutrição prática e baseada em ciência. Consultas presenciais e online — planos personalizados e receitas." />
@@ -22,7 +22,7 @@
   <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
     <div class="flex items-center gap-3">
       <div class="w-24 h-full rounded-lg bg-gradient-to-tr from-amber-400 to-rose-400 flex items-center justify-center text-white font-semibold">
-        <img src="https://www.dropbox.com/scl/fi/375h6hinca7m0y1t9esdc/Luciane_nutricionista_Logo.jpeg?rlkey=9at61y313d1eyd9epf1mogsbh&st=fbjrcak8&raw=1" alt="Logo" class="Logo" width="150" height="mx-auto">
+        <img src="Assets/Images/Logo.png" alt="Logo" class="Logo" width="150" height="mx-auto">
       </div>
       <div>
         <div class="text-lg font-bold">Luciane Gonçalves</div>
@@ -48,36 +48,22 @@
   <!-- ========== HERO ========== -->
   <section class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
     <div>
-      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-        Abordagem Humanizada
-        Tratamento personalizado respeitando suas preferências e limitações      </h1>
+      <h1 class=" font-extrabold ">
+        Abordagem Humanizada<br>
+        Tratamento personalizado respeitando suas preferências e limitações.</h1>
       <p class="mt-4 text-slate-700 max-w-xl">
         Planos alimentares personalizados que se adaptam ao seu estilo de vida. 
-        Alcance seus objetivos de saúde com acompanhamento profissional. </p>
+        Alcance seus objetivos de saúde com acompanhamento profissional.</p>
 
       <div class="mt-6 flex gap-4">
-        <a href="#contato" class="inline-flex items-center gap-2 bg-amber-500 text-white px-5 py-3 rounded-lg font-medium shadow hover:brightness-95">Agendar Consulta</a>
+        <a href="#contato" class="inline-flex items-center gap-2 bg-green-500 text-white px-5 py-3 rounded-lg font-medium shadow hover:brightness-95">Agendar Consulta</a>
         <a href="#blog" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border">Ver Receitas</a>
       </div>
 
-      <div class="mt-6 flex items-center gap-4 text-slate-600">
-        <div class="text-sm">Atendo presencial e online • São Paulo, BR</div>
-      </div>
-    </div>
-
-    <div class="flex justify-center md:justify-end">
-      <div class="max-w-6xl mx-auto rounded-2xl bg-slate-100 overflow-hidden shadow-lg">
-        <!-- coloque sua foto em assets/images/profile.jpg -->
-        <img src="https://www.dropbox.com/scl/fi/o100jia7bp2qu5bb5hlyn/luciane-goncalves.png?rlkey=hjai6ejkntepa47r7ihnbww2d&st=pwmpt8m8&raw=1" alt="nutricionista" class="w-full h-full object-cover" />
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SOBRE ========== -->
-  <section id="sobre" class="max-w-6xl mx-auto px-6 py-8">
-    <div class="grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h2 class="text-2xl font-bold">Sobre mim</h2>
+        <section id="sobre" class="max-w-6xl mx-auto px-6 py-8">
+    <div>
+      <div id="formaçao">
+        <h2 class="font-bold">Sobre mim</h2>
         <p class="mt-4 text-slate-700">
           Sobre Luciane Gonçalves
           Com 5 anos de experiência e pós-graduação em Nutrição Esportiva, 
@@ -90,11 +76,10 @@
           <li>• Planos personalizados e baseados em exames</li>
           <li>• Receitas práticas e orientadas para sua rotina</li>
         </ul>
-        <a href="#contato" class="mt-6 inline-block px-5 py-3 bg-amber-100 rounded-lg">Quero agendar</a>
       </div>
 
       <div class="bg-white rounded-xl p-6 shadow">
-        <h3 class="font-semibold">Formação & Certificações</h3>
+        <h3 class="font-semibold ">Formação & Certificações</h3>
         <ul class="mt-3 text-sm text-slate-600 space-y-2">
           <li>• Graduação em Nutrição — Universidade X</li>
           <li>• Especialização em Nutrição Funcional — Instituto Y</li>
@@ -104,6 +89,21 @@
       </div>
     </div>
   </section>
+
+    </div>
+
+    <div class="flex justify-center md:justify-end">
+      <div class="max-w-6xl mx-auto rounded-2xl bg-slate-100 overflow-hidden shadow-lg">
+        <!-- coloque sua foto em assets/images/profile.jpg -->
+        <img src="https://www.dropbox.com/scl/fi/o100jia7bp2qu5bb5hlyn/luciane-goncalves.png?rlkey=hjai6ejkntepa47r7ihnbww2d&st=pwmpt8m8&raw=1" alt="nutricionista" class="w-full h-full object-cover" 
+        
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SOBRE ========== -->
+
 
   <!-- ========== SERVIÇOS (visível no index; depois podemos separar em arquivo) ========== -->
   <section id="servicos" class="max-w-6xl mx-auto px-6 py-8">
