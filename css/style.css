@@ -22,9 +22,9 @@ html {
 }
 
 body {
-  font-family: "Inter", "Poppins", sans-serif;
-  color: #334155; /* slate-700 */
-  background-color: #fffdf9;
+  font-family: 'Inter', sans-serif;
+  color: #1C1C1C;
+  background-color: #F5F3EF;
   line-height: 1.6;
 }
 
@@ -45,7 +45,7 @@ section {
    HEADER
 --------------------------------*/
 header {
-  background: rgba(87, 200, 77);
+  background: rgb(255, 255, 255);
   border-bottom: 1px solid #f3f4f6;
   position: sticky;
   top: 0;
@@ -184,7 +184,7 @@ blockquote {
 blockquote::before {
   content: "“";
   font-size: 2rem;
-  color: #facc15;
+  color: #035000;
   position: absolute;
   left: -12px;
   top: -8px;
