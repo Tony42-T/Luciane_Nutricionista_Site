@@ -3,6 +3,16 @@
    ================================ */
 
 // --- MENU MOBILE ---
+    (function () {
+      const btn = document.getElementById('btn-mobile');
+      const menu = document.getElementById('nav-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', function () {
+        // alterna exibição do menu no mobile
+        menu.classList.toggle('hidden');
+      });
+    })();
+
 const btnMobile = document.getElementById('btn-mobile');
 const navMenu = document.getElementById('nav-menu');
 

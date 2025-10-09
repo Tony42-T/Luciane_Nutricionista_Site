@@ -73,7 +73,7 @@ header nav a:hover {
   #nav-menu {
     display: none;
     flex-direction: column;
-    background: rgb(131, 212, 117);
+    background: rgb(255, 255, 255);
     position:absolute;
     top: 100px;
     right: 20px;
@@ -135,6 +135,7 @@ h1 {
 #formaçao{
 padding-bottom: 30px;
 }
+
 /* -------------------------------
    SEÇÕES
 --------------------------------*/
