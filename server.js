@@ -5,8 +5,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
-const { Resend } = require('resend');  // importamos o Resend
-require('dotenv').config(); // para usar variáveis de ambiente (como a chave da API)
+const { Resend } = require('resend');
+require('dotenv').config();
 
 // 2. Inicializar o app
 const app = express();
@@ -14,56 +14,58 @@ const app = express();
 // 3. Configurar porta
 const PORT = process.env.PORT || 3000;
 
-// 4. Middleware para ler formulários
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-// 5. Tornar a pasta 'docs' acessível
-app.use(express.static(path.join(__dirname, 'docs')));
-
-// 6. Inicializar o Resend (✅ NOVO)
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-// 7. Rota principal (index.html)
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'docs', 'index.html'));
-});
-// ✅ Configura o CORS
+// ✅ 4. Configurar CORS (DEVE vir antes das rotas)
 app.use(cors({
-  origin: 'https://tony42-t.github.io', // seu domínio no GitHub Pages
-  methods: ['POST', 'GET'],
+  origin: [
+    'https://tony42-t.github.io', // domínio do GitHub Pages
+    'http://localhost:3000'       // útil para testar localmente
+  ],
+  methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
 }));
 
-// 8. Rota para processar formulário
+// ✅ 5. Middleware para ler formulários
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// ✅ 6. Tornar a pasta 'docs' acessível
+app.use(express.static(path.join(__dirname, 'docs')));
+
+// ✅ 7. Inicializar o Resend
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+// ✅ 8. Rota principal
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'docs', 'index.html'));
+});
+
+// ✅ 9. Rota para processar formulário
 app.post('/send-email', async (req, res) => {
   const { nome, email, phone, mensagem } = req.body;
 
   try {
     const data = await resend.emails.send({
-      from: 'onboarding@resend.dev', // remetente autorizado pela Resend
-      to: process.env.EMAIL_TO, // o destino vem do .env
+      from: 'onboarding@resend.dev',
+      to: process.env.EMAIL_TO,
       subject: `Novo contato de ${nome}`,
       text: `
         Nome: ${nome}
         Email: ${email}
-        phone: ${phone}
+        Telefone: ${phone}
         Mensagem:
         ${mensagem}
       `
     });
 
     console.log('✅ Email enviado com sucesso:', data);
-    res.status(200).send('Mensagem enviada com sucesso!');
+    res.status(200).json({ success: true, message: 'Mensagem enviada com sucesso!' });
   } catch (error) {
     console.error('❌ Erro ao enviar o email:', error);
-    res.status(500).send('Ocorreu um erro ao enviar o email.');
+    res.status(500).json({ success: false, message: 'Ocorreu um erro ao enviar o email.' });
   }
 });
 
-
-
-// 9. Iniciar servidor
+// ✅ 10. Iniciar servidor
 app.listen(PORT, () => {
-  console.log(`✅ Servidor rodando em http://localhost:${PORT}`);
+  console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
 });
