@@ -4,6 +4,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const cors = require('cors');
 const { Resend } = require('resend');  // importamos o Resend
 require('dotenv').config(); // para usar variáveis de ambiente (como a chave da API)
 
@@ -27,6 +28,12 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'docs', 'index.html'));
 });
+// ✅ Configura o CORS
+app.use(cors({
+  origin: 'https://tony42-t.github.io', // seu domínio no GitHub Pages
+  methods: ['POST', 'GET'],
+  allowedHeaders: ['Content-Type'],
+}));
 
 // 8. Rota para processar formulário
 app.post('/send-email', async (req, res) => {
