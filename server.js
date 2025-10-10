@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 });
 
 // 8. Rota para processar formulário
-app.post('https://luciane-nutricionista-site-api.onrender.com/send-email', async (req, res) => {
+app.post('/send-email', async (req, res) => {
   const { nome, email, phone, mensagem } = req.body;
 
   try {
