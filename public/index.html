@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="Assets/Images/Logo.png" type="image/png" class="logo">
+
+  <title>Luciane Gonçalves — Nutricionista Clínica & Funcional</title>
+  <meta name="description" content="Nutrição prática e baseada em ciência. Consultas presenciais e online — planos personalizados e receitas." />
+  
+  <!-- Link para seu CSS (vou gerar esse arquivo quando você pedir) -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Tailwind CDN: útil para prototipagem rápida. Pode remover se preferir CSS próprio. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gradient-to-b from-white via-amber-50 to-white text-slate-800">
+<div id="header-placeholder"></div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="px-6 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="transition-transform hover:scale-105 ">
+        <div class="w-24 h-24 rounded-lg flex items-center justify-center text-white font-semibold transition-transform hover:scale-105 hover:brightness-95">
+        <img src="Assets/Images/Logo.png" alt="Logo" class="Logo" width="175" height="mx-auto">
+      </div>
+    </a>
+      <div>
+        <div class="text-lg font-bold text-green-900 tracking-wide">Luciane Gonçalves</div>
+        <div class="text-sm text-emerald-700 font-medium">Nutricionista Esportiva</div>
+      </div>
+    </div>
+
+    <!-- Nav desktop -->
+    <nav id="nav-menu" 
+    class="hidden md:flex gap-6 items-center text-slate-700">
+      <a href="#sobre" 
+      class="scroll-smooth hover:text-amber-600">Sobre</a>
+      <a href="#servicos" 
+      class="scroll-smooth hover:text-amber-600">Serviços</a>
+      <a href="#depoimentos" 
+      class="scroll-smooth hover:text-amber-600">Depoimentos</a>
+      <a href="#blog" 
+      class="scroll-smooth hover:text-amber-600">Blog</a>
+      <a href="#contato" 
+      class="scroll-smooth px-4 py-2 bg-gradient-to-r from-green-950 to-green-800 text-white rounded-lg shadow transition-transform hover:scale-105 hover:brightness-95">Agendar</a>
+    </nav>
+
+    <!-- Botão mobile -->
+    <button id="btn-mobile" 
+    aria-label="Abrir menu" 
+    class="md:hidden px-2 py-1 border rounded">
+      ☰
+    </button>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h1 class=" font-extrabold ">
+        Abordagem Humanizada<br>
+        Tratamento personalizado respeitando suas preferências e limitações.</h1>
+      <p class="mt-4 text-slate-700 max-w-xl">
+        Planos alimentares personalizados que se adaptam ao seu estilo de vida. 
+        Alcance seus objetivos de saúde com acompanhamento profissional.</p>
+
+      <div class="mt-6 flex gap-4">
+        <a href="#contato" 
+        class="inline-flex items-center gap-2 bg-gradient-to-r from-green-950 to-green-800 text-white px-5 py-3 rounded-lg font-medium shadow transition-transform hover:scale-105 hover:brightness-95 ">Agendar Consulta</a>
+        <a href="#blog" 
+        class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border">Ver Receitas</a>
+      </div>
+
+        <section id="sobre" 
+        class="max-w-6xl mx-auto px-6 py-8">
+    <div>
+      <div id="formaçao">
+        <h2 class="text-bg font-bold text-green-900">Sobre Luciane Gonçalves</h2>
+        <p class="mt-4 text-slate-700">
+Com 5 anos de experiência e pós-graduação em Nutrição Esportiva, dedico minha carreira a transformar vidas por meio da alimentação personalizada.
+Cada plano que crio é feito com paixão e dedicação, projetado para respeitar suas preferências e objetivos.<br>
+
+Acredito que nutrição vai além de dietas: é sobre educar meus pacientes a conquistarem saúde, bem-estar e confiança de forma sustentável, 
+alcançando resultados reais e conectando-se de maneira saudável com o próprio corpo.
+        </p>
+        <section
+  id="icones"
+  class="flex flex-wrap justify-start items-start gap-8 max-w-5xl mx-auto p-8 bg-[#FFFAEE] rounded-2xl"
+>
+  <!-- Pacientes atendidos -->
+  <div class="flex items-center gap-4 w-full sm:w-auto">
+    <div
+      class="flex items-center justify-center w-12 h-12 rounded-full bg-green-100 shrink-0"
+    >
+      <!-- ícone pessoas -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="#065f46"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M5.121 17.804A8 8 0 0112 15c1.858 0 3.556.63 4.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0z"
+        />
+      </svg>
+    </div>
+    <div class="text-left">
+      <p class="font-semibold text-gray-800 text-lg">500+</p>
+      <p class="text-sm text-gray-600 -mt-1">Pacientes atendidos</p>
+    </div>
+  </div>
+
+  <!-- Avaliação média -->
+  <div class="flex items-center gap-4 w-full sm:w-auto">
+    <div
+      class="flex items-center justify-center w-12 h-12 rounded-full bg-green-100 shrink-0"
+    >
+      <!-- ícone estrela -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="#065f46"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.963a1 1 0 00.95.69h4.167c.969 0 1.371 1.24.588 1.81l-3.37 2.449a1 1 0 00-.364 1.118l1.286 3.963c.3.921-.755 1.688-1.54 1.118l-3.37-2.449a1 1 0 00-1.175 0l-3.37 2.449c-.784.57-1.838-.197-1.539-1.118l1.285-3.963a1 1 0 00-.364-1.118L2.96 9.39c-.783-.57-.38-1.81.588-1.81h4.167a1 1 0 00.95-.69l1.285-3.963z"
+        />
+      </svg>
+    </div>
+    <div class="text-left">
+      <p class="font-semibold text-gray-800 text-lg">4.9/5</p>
+      <p class="text-sm text-gray-600 -mt-1">Avaliação média</p>
+    </div>
+  </div>
+
+  <!-- Anos de experiência -->
+  <div class="flex items-center gap-4 w-full sm:w-auto">
+    <div
+      class="flex items-center justify-center w-12 h-12 rounded-full bg-green-100 shrink-0"
+    >
+      <!-- ícone medalha -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="#065f46"
+        class="w-6 h-6 transform rotate-180"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 8.25v7.5m0 0l3-3m-3 3l-3-3M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+    </div>
+    <div class="text-left">
+      <p class="font-semibold text-gray-800 text-lg">5</p>
+      <p class="text-sm text-gray-600 -mt-1">Anos de experiência</p>
+    </div>
+  </div>
+</section>
+
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow">
+        <h3 class="font-semibold ">Formação & Certificações</h3>
+        <ul class="mt-3 text-sm text-slate-600 space-y-2">
+          <li>• Graduação em Nutrição — Universidade Anhanguera de São Paulo</li>
+          <li>• Pós-Graduação em Bodybuilder Coach (Nutrição Esportiva) — Faculdade UNIGUAÇU</li>
+        </ul>
+        <div class="mt-4 text-sm text-slate-500">CRN: 387670</div>
+      </div>
+    </div>
+  </section>
+
+    </div>
+
+    <div class="flex justify-center md:justify-end">
+      <div class="max-w-6xl mx-auto rounded-2xl bg-slate-100 overflow-hidden shadow-lg">
+        <img src="https://www.dropbox.com/scl/fi/o100jia7bp2qu5bb5hlyn/luciane-goncalves.png?rlkey=hjai6ejkntepa47r7ihnbww2d&st=pwmpt8m8&raw=1" 
+        alt="nutricionista" 
+        class="w-full h-full object-cover" 
+        
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SOBRE ========== -->
+
+
+  <!-- ========== SERVIÇOS ========== -->
+  <section id="servicos" 
+  class="max-w-6xl mx-auto px-6 py-8">
+    <h2 class="text-2xl font-bold">Serviços / Consultas</h2>
+    <p class="text-slate-700 mt-2">Atendimento personalizado com foco em resultado e bem-estar.</p>
+
+    <div class="mt-6 grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl p-6 shadow">
+        <h4 class="font-semibold">Consulta Nutricional Individual</h4>
+        <p class="mt-3 text-slate-600">Avaliação completa com plano alimentar personalizado.</p>
+        <div class="mt-4 flex items-center justify-between">
+          <div class="font-semibold">R$ 180</div>
+          <a href="#contato" 
+          class="bg-gradient-to-r from-green-950 to-green-800 text-white px-5 py-3 rounded-lg font-medium shadow transition-transform hover:scale-105 hover:brightness-95">Agendar</a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow">
+        <h4 class="font-semibold">Acompanhamento Mensal</h4>
+        <p class="mt-3 text-slate-600">4 encontros com ajustes, cardápios e suporte constante.</p>
+        <div class="mt-4 flex items-center justify-between">
+          <div class="font-semibold">R$ 600</div>
+          <a href="#contato" 
+          class="bg-gradient-to-r from-green-950 to-green-800 text-white px-5 py-3 rounded-lg font-medium shadow transition-transform hover:scale-105 hover:brightness-95">Agendar</a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow">
+        <h4 class="font-semibold">Plano Alimentar para Emagrecimento</h4>
+        <p class="mt-3 text-slate-600">Estratégias seguras e eficazes para perda de gordura.</p>
+        <div class="mt-4 flex items-center justify-between">
+          <div class="font-semibold">A partir de R$ 220</div>
+          <a href="#contato" 
+          class="bg-gradient-to-r from-green-950 to-green-800 text-white px-5 py-3 rounded-lg font-medium shadow transition-transform hover:scale-105 hover:brightness-95">Agendar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DEPOIMENTOS ========== -->
+  <section id="depoimentos" class="max-w-6xl mx-auto px-6 py-8">
+    <h2 class="text-2xl font-bold">Depoimentos</h2>
+    <div class="mt-6 grid md:grid-cols-3 gap-4">
+      <blockquote class="bg-white p-6 rounded-xl shadow">
+        <p class="text-slate-700">“A Luciane Gonçalves transformou minha relação com a comida — nunca me senti tão disposta!”</p>
+        <footer class="mt-4 text-sm text-slate-500">— Mariana R.</footer>
+      </blockquote>
+      <blockquote class="bg-white p-6 rounded-xl shadow">
+        <p class="text-slate-700">“Perdi 8kg com acompanhamento humano e prático. Recomendo!”</p>
+        <footer class="mt-4 text-sm text-slate-500">— Carlos M.</footer>
+      </blockquote>
+      <blockquote class="bg-white p-6 rounded-xl shadow">
+        <p class="text-slate-700">“Receitas fáceis e planos que cabem na rotina. Atendimento excelente.”</p>
+        <footer class="mt-4 text-sm text-slate-500">— Beatriz F.</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ========== BLOG (resumo) ========== -->
+  <section id="blog" class="max-w-6xl mx-auto px-6 py-8">
+    <div class="flex items-center justify-between">
+      <h2 class="text-2xl font-bold">Blog / Receitas</h2>
+      <a href="#blog" class="text-amber-600">Ver tudo</a>
+    </div>
+
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <article class="bg-white rounded-xl p-6 shadow">
+        <div class="text-sm text-slate-500">12 set 2025</div>
+        <h3 class="mt-2 font-semibold text-lg">5 Receitas rápidas e nutritivas para a semana</h3>
+        <p class="mt-2 text-slate-700">Sugestões práticas para montar marmitas balanceadas e ganhar tempo.</p>
+      </article>
+
+      <article class="bg-white rounded-xl p-6 shadow">
+        <div class="text-sm text-slate-500">5 jul 2025</div>
+        <h3 class="mt-2 font-semibold text-lg">Como interpretar resultados de exames de rotina</h3>
+        <p class="mt-2 text-slate-700">Um guia simples para entender glicemia, colesterol e marcadores inflamatórios.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- =========== CONTATO / AGENDAMENTO ========== -->
+  <section id="contato" 
+  class="max-w-6xl mx-auto px-6 py-12">
+    <div class="bg-gradient-to-r from-amber-50 to-white rounded-2xl p-8 shadow grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-2xl font-bold">Contato / Agendamento</h2>
+        <p class="mt-2 text-slate-700">Preencha o formulário ou envie mensagem pelas redes sociais.</p>
+                  <!--Links= instagram / linkedln / facebook / email / telefone -->
+        <div class="mt-4 space-y-3 text-slate-600">
+          <div>📧 luciane_goncalves@mail.co.uk</div>
+          <div>📱 +44 74850-4978</div>
+          <div class="mt-4 gap-3 flex flex-wrap justify-center">
+            <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/luciane_gonccalves?igsh=MWkxd3NxcWM1aGxsNQ==" 
+            class="px-3 py-2 bg-gradient-to-r from-green-950 to-green-800 text-white rounded-lg transition-transform hover:scale-105 hover:brightness-95 border">Instagram</a>
+            <a target="_blank" href="#" 
+            class="px-3 py-2 bg-gradient-to-r from-green-950 to-green-800 text-white rounded-lg transition-transform hover:scale-105 hover:brightness-95 border">LinkedIn</a>
+            <a target="_blank" href="#" 
+            class="px-3 py-2 bg-gradient-to-r from-green-950 to-green-800 text-white rounded-lg transition-transform hover:scale-105 hover:brightness-95 border">Facebook</a>
+          </div>
+        </div>
+      </div>
+<!-- ================= Formulário ===============-->
+      <form 
+  id="contactForm"
+  action="/send-email"
+  method="POST" 
+  class="space-y-4 bg-white rounded-xl p-6 shadow">
+
+  <input type="hidden" name="_subject" value="Novo agendamento via site" />
+
+  <div>
+    <label class="text-sm">Nome</label>
+    <input 
+      id="nome"
+      name="nome" 
+      placeholder="Seu Nome"
+      maxlength="100"
+      minlength="2"
+      required 
+      class="w-full mt-1 px-3 py-2 border rounded-lg" />
+  </div>
+
+  <div>
+    <label class="text-sm">Email</label>
+    <input 
+      id="email"
+      name="email"
+      placeholder="Seu Email" 
+      type="email"
+      maxlength="100" 
+      required 
+      class="w-full mt-1 px-3 py-2 border rounded-lg" />
+  </div>
+
+  <div>
+    <label class="text-sm">Telefone</label>
+    <input 
+      id="phone"
+      name="phone" 
+      placeholder="Seu Celular/Whatsapp"
+      maxlength="16"
+      minlength="15"
+      class="w-full mt-1 px-3 py-2 border rounded-lg" />
+  </div>
+
+  <div>
+    <label class="text-sm">Mensagem / Observações</label>
+    <textarea 
+      id="mensagem"
+      name="mensagem"
+      placeholder="Tem dúvidas? Procura por mais informações? Deixe sua mensagem aqui." 
+      rows="4" 
+      maxlength="300"
+      class="w-full mt-1 px-3 py-2 border rounded-lg"></textarea>
+  </div>
+
+  <div class="flex justify-end">
+    <button 
+      type="submit" 
+      class="px-5 py-2 bg-gradient-to-r from-green-950 to-green-800 text-white rounded-lg transition-transform hover:scale-105 hover:brightness-95">
+      Enviar
+    </button>
+  </div>
+</form>
+
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer 
+  class="max-w-6xl mx-auto px-6 py-8 text-slate-600">
+    <div 
+    class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <div 
+        class="font-semibold">Luciane Gonçalves</div>
+        <div 
+        class="text-sm">Nutricionista Esportiva</div>
+      </div>
+      <div 
+      class="flex items-center gap-4">
+        <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/luciane_gonccalves?igsh=MWkxd3NxcWM1aGxsNQ==">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+    <div 
+    class="mt-6 text-sm text-slate-400">© 2025 Luciane Gonçalves. Todos os direitos reservados.
+  </div>
+  </footer>
+
+  <!-- ======= Script mínimo para menu mobile ======= -->
+  <script src="js/main.js"></script>
+<script>
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+  e.preventDefault(); // Evita recarregar a página
+
+  // Captura os dados do formulário (incluindo o telefone)
+  const formData = {
+    nome: document.getElementById('nome').value,
+    email: document.getElementById('email').value,
+    phone: document.getElementById('phone').value, // ✅ Adicionado
+    mensagem: document.getElementById('mensagem').value
+  };
+
+  try {
+    const response = await fetch('/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+
+    if (response.ok) {
+      alert('✅ Mensagem enviada com sucesso!');
+      e.target.reset();
+    } else {
+      const errorText = await response.text();
+      alert('❌ Erro ao enviar mensagem: ' + errorText);
+    }
+  } catch (error) {
+    console.error('⚠️ Erro de conexão:', error);
+    alert('⚠️ Erro de conexão com o servidor.');
+  }
+});
+</script>
+</script>
+
+</body>
+</html>
