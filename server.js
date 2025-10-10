@@ -4,7 +4,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const { Resend } = require('resend');  // ✅ NOVO: importamos o Resend
+const { Resend } = require('resend');  // importamos o Resend
 require('dotenv').config(); // para usar variáveis de ambiente (como a chave da API)
 
 // 2. Inicializar o app
@@ -33,7 +33,6 @@ app.post('/send-email', async (req, res) => {
   const { nome, email, phone, mensagem } = req.body;
 
   try {
-    // ✅ Substituímos o nodemailer pelo Resend
     const data = await resend.emails.send({
       from: 'onboarding@resend.dev', // remetente autorizado pela Resend
       to: process.env.EMAIL_TO, // o destino vem do .env
