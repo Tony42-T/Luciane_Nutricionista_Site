@@ -17,19 +17,19 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// 5. Tornar a pasta 'public' acessível
-app.use(express.static(path.join(__dirname, 'public')));
+// 5. Tornar a pasta 'docs' acessível
+app.use(express.static(path.join(__dirname, 'docs')));
 
 // 6. Inicializar o Resend (✅ NOVO)
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // 7. Rota principal (index.html)
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'docs', 'index.html'));
 });
 
 // 8. Rota para processar formulário
-app.post('/send-email', async (req, res) => {
+app.post('https://luciane-site.onrender.com/send-email', async (req, res) => {
   const { nome, email, phone, mensagem } = req.body;
 
   try {

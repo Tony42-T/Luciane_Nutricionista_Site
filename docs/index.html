@@ -303,7 +303,7 @@ alcançando resultados reais e conectando-se de maneira saudável com o próprio
 <!-- ================= Formulário ===============-->
       <form 
   id="contactForm"
-  action="/send-email"
+  action="https://luciane-site.onrender.com/send-email"
   method="POST" 
   class="space-y-4 bg-white rounded-xl p-6 shadow">
 
@@ -405,7 +405,7 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
   };
 
   try {
-    const response = await fetch('/send-email', {
+    const response = await fetch('https://luciane-site.onrender.com/send-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
