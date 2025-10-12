@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors({
   origin: [
     'https://luciane-nutricionista-site-api.onrender.com',// Domínio render
-    'https://tony42-t.github.io/Luciane_Nutricionista_Site', // domínio do GitHub Pages
+    'https://tony42-t.github.io', // domínio do GitHub Pages
     'http://localhost:3000'       // para testar localmente
   ],
   methods: ['GET', 'POST'],
