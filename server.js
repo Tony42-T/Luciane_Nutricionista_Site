@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 3000;
 // ✅ 4. Configurar CORS (DEVE vir antes das rotas)
 app.use(cors({
   origin: [
-    'https://luciane-nutricionista-site-api.onrender.com',// Domínio render
+    'https://luciane-nutricionista-site-api.onrender.com/send-email',// Domínio render
     'https://tony42-t.github.io/Luciane_Nutricionista_Site', // domínio do GitHub Pages
     'http://localhost:3000'       // para testar localmente
   ],
