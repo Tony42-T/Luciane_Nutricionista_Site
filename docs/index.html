@@ -30,6 +30,11 @@
         <div class="text-lg font-bold text-green-900 tracking-wide">Luciane Gonçalves</div>
         <div class="text-sm text-emerald-700 font-medium">Nutricionista Esportiva</div>
       </div>
+      <button id="btn-mobile" 
+    aria-label="Abrir menu" 
+    class="md:hidden px-2 py-1 border rounded">
+      ☰
+    </button>
     </div>
 
     <!-- Nav desktop -->
@@ -407,7 +412,8 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
   try {
     const response = await fetch(
       'https://luciane-nutricionista-site-api.onrender.com/send-email',
-      'https://tony42-t.github.io/Luciane_Nutricionista_Site', 
+      'https://tony42-t.github.io/Luciane_Nutricionista_Site',
+      'http://localhost:3000',
       {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
