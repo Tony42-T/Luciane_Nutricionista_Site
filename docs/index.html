@@ -13,6 +13,51 @@
 
   <!-- Tailwind CDN: útil para prototipagem rápida. Pode remover se preferir CSS próprio. -->
   <script src="https://cdn.tailwindcss.com"></script>
+<!--janela flutuante login/cadstro e E-book-->
+  <style>
+    .overlay{
+      position:fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+
+    }
+    .modal{
+      background-color: rgba(255, 255, 255, 0.842);
+    }
+    .modal h2{
+      text-align: center;
+    }
+    .modal input{
+      width: 100%;
+      justify-content: left;
+    }
+    .modal button{
+      width:50%;
+    }
+    .close-btn{
+      background-color: blue;
+    }
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px;
+    }
+    @media (max-width: 768px) { 
+      .container{
+      flex-direction: column;
+    }
+      
+    }
+    
+    
+  </style>
 
 </head>
 <body class="bg-gradient-to-b from-white via-amber-50 to-white text-slate-800">
@@ -31,26 +76,55 @@
         <div class="text-sm text-emerald-700 font-medium">Nutricionista Esportiva</div>
       </div>
     </div>
-
     <!-- Nav desktop -->
     <nav id="nav-menu" 
     class="hidden md:flex gap-6 items-center text-slate-700">
+    <button id="abrir-login">Login/Cadastro</button>
       <a href="#sobre" 
-      class="scroll-smooth hover:text-amber-600">Sobre</a>
+      class="scroll-smooth text-green-900 hover:text-white">Sobre</a>
       <a href="#servicos" 
-      class="scroll-smooth hover:text-amber-600">Serviços</a>
+      class="scroll-smooth text-green-900 hover:text-white">Serviços</a>
       <a href="#depoimentos" 
-      class="scroll-smooth hover:text-amber-600">Depoimentos</a>
-      <a href="#blog" 
-      class="scroll-smooth hover:text-amber-600">Blog</a>
+      class="scroll-smooth text-green-900 hover:text-white">Depoimentos</a>
+      <a href="pages/Blog.html" 
+      class="scroll-smooth text-green-900 hover:text-white">Blog</a>
       <a href="#contato" 
       class="scroll-smooth px-4 py-2 bg-gradient-to-r from-green-950 to-green-800 text-white rounded-lg shadow transition-transform hover:scale-105 hover:brightness-95">Agendar</a>
     </nav>
+    <!--Modal Login-->>
+        <div class="overlay" id="overlay">
+      <div class="container">
+        <h2>Entrar</h2>
+        <form id="loginform">
+            <input type="email"
+            placeholder="Email" required>
+            <input type="nome"
+            placeholder="Nome" required>
+            <button type="submit">Adquira o E-book agora.</button>
+            <button type="button" class="close-btn" id="fechar-login">Deixar para depois.</button>
+        </form>
+       <figure class="width" id="OQMSND"><img src="Assets/Images/O Que Me sabota Na Dieta.jpg" alt="o que me sabota na dieta ?"></figure>
+
+      </div>
+    </div>
+    <script>
+      const Abrir=
+      document.getElementById('abrir-login');
+      const Fechar=
+      document.getElementById('fechar-login');
+      const overlay=
+      document.getElementById('overlay');
+
+      Abrir.onclick = () =>
+      overlay.style.display = 'flex';
+      Fechar.onclick = () =>
+      overlay.style.display = 'none';
+    </script>
 
     <!-- Botão mobile -->
     <button id="btn-mobile" 
     aria-label="Abrir menu" 
-    class="md:hidden px-2 py-1 border rounded">
+    class="md:hidden px-2 py-1 border rounded ">
       ☰
     </button>
   </header>
@@ -58,7 +132,7 @@
   <!-- ========== HERO ========== -->
   <section class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
     <div>
-      <h1 class=" font-extrabold ">
+      <h1 class=" font-extrabold">
         Abordagem Humanizada<br>
         Tratamento personalizado respeitando suas preferências e limitações.</h1>
       <p class="mt-4 text-slate-700 max-w-xl">
@@ -187,7 +261,7 @@ alcançando resultados reais e conectando-se de maneira saudável com o próprio
 
     <div class="flex justify-center md:justify-end">
       <div class="max-w-6xl mx-auto rounded-2xl bg-slate-100 overflow-hidden shadow-lg">
-        <img src="https://www.dropbox.com/scl/fi/o100jia7bp2qu5bb5hlyn/luciane-goncalves.png?rlkey=hjai6ejkntepa47r7ihnbww2d&st=pwmpt8m8&raw=1" 
+        <img fetchpriority="high" src="https://www.dropbox.com/scl/fi/o100jia7bp2qu5bb5hlyn/luciane-goncalves.png?rlkey=hjai6ejkntepa47r7ihnbww2d&st=pwmpt8m8&raw=1" 
         alt="nutricionista" 
         class="w-full h-full object-cover" 
         

@@ -45,7 +45,7 @@ section {
    HEADER
 --------------------------------*/
 header {
-  background: rgb(255, 255, 255);
+  background:#ffffff;
   border-bottom: 1px solid #f3f4f6;
   position: sticky;
   top: 0;
@@ -61,19 +61,19 @@ header nav a {
 }
 
 header nav a:hover {
-  color: rgb(255, 255, 255); /* amber-500 */
+  color: rgb(255, 255, 255);
 }
 
 /* Mobile nav */
-#btn-mobile {
-  display: none;
+#btn-mobile:hover {
+color: #ffffff;
 }
 
 @media (max-width: 768px) {
   #nav-menu {
     display: none;
     flex-direction: column;
-    background: rgb(255, 255, 255);
+    background: #eb9a77;
     position:absolute;
     top: 100px;
     right: 20px;

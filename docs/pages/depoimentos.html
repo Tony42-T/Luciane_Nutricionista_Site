@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="Assets/Images/Logo.png" type="image/png" class="logo">
+
+  <title>Luciane Gonçalves — Nutricionista Clínica & Funcional</title>
+  <meta name="description" content="Nutrição prática e baseada em ciência. Consultas presenciais e online — planos personalizados e receitas." />
+  
+  <!-- Link para seu CSS (vou gerar esse arquivo quando você pedir) -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Tailwind CDN: útil para prototipagem rápida. Pode remover se preferir CSS próprio. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gradient-to-b from-white via-amber-50 to-white text-slate-800">
+<div id="header-placeholder"></div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="px-6 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <a href="../index.html" class="transition-transform hover:scale-105 ">
+        <div class="w-24 h-24 rounded-lg flex items-center justify-center text-white font-semibold transition-transform hover:scale-105 hover:brightness-95">
+        <img src="../Assets/Images/Logo.png" alt="Logo" class="Logo" width="175" height="mx-auto">
+      </div>
+    </a>
+      <div>
+        <div class="text-lg font-bold text-green-900 tracking-wide">Luciane Gonçalves</div>
+        <div class="text-sm text-emerald-700 font-medium">Nutricionista Esportiva</div>
+      </div>
+    </div>
+
+    <!-- Nav desktop -->
+    <nav id="nav-menu" 
+    class="hidden md:flex gap-6 items-center text-slate-700">
+      <a href="../index.html/#sobre" 
+      class="scroll-smooth text-green-900 hover:text-amber-600">Sobre</a>
+      <a href="../index.html/#servicos" 
+      class="scroll-smooth text-green-900 hover:text-amber-600">Serviços</a>
+      <a href="../index.html/#depoimentos" 
+      class="scroll-smooth text-green-900 hover:text-amber-600">Depoimentos</a>
+      <a href="../pages/Blog.html" 
+      class="scroll-smooth text-green-900 hover:text-amber-600">Blog</a>
+      <a href="../index.html/#contato" 
+      class="scroll-smooth px-4 py-2 bg-gradient-to-r from-green-950 to-green-800 text-white rounded-lg shadow transition-transform hover:scale-105 hover:brightness-95">Agendar</a>
+    </nav>
+
+    <!-- Botão mobile -->
+    <button id="btn-mobile" 
+    aria-label="Abrir menu" 
+    class="md:hidden px-2 py-1 border rounded">
+      ☰
+    </button>
+  </header>
+  
+  <footer 
+  class="max-w-6xl mx-auto px-6 py-8 text-slate-600">
+    <div 
+    class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <div 
+        class="font-semibold">Luciane Gonçalves</div>
+        <div 
+        class="text-sm">Nutricionista Esportiva</div>
+      </div>
+      <div 
+      class="flex items-center gap-4">
+        <a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/luciane_gonccalves?igsh=MWkxd3NxcWM1aGxsNQ==">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+    <div 
+    class="mt-6 text-sm text-slate-400">© 2025 Luciane Gonçalves. Todos os direitos reservados.
+  </div>
+  </footer>
+
+  <!-- ======= Script mínimo para menu mobile ======= -->
+  <script src="js/main.js"></script>
+<script>
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+  e.preventDefault(); // Evita recarregar a página
+
+  // Captura os dados do formulário (incluindo o telefone)
+  const formData = {
+    nome: document.getElementById('nome').value,
+    email: document.getElementById('email').value,
+    phone: document.getElementById('phone').value, // ✅ Adicionado
+    mensagem: document.getElementById('mensagem').value
+  };
+
+  try {
+    const response = await fetch(
+      'https://luciane-nutricionista-site-api.onrender.com/send-email',
+      {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+
+    if (response.ok) {
+      alert('✅ Mensagem enviada com sucesso!');
+      e.target.reset();
+    } else {
+      const errorText = await response.text();
+      alert('❌ Erro ao enviar mensagem: ' + errorText);
+    }
+  } catch (error) {
+    console.error('⚠️ Erro de conexão:', error);
+    alert('⚠️ Erro de conexão com o servidor.');
+  }
+});
+</script>
+</script>
+
+</body>
+</html>
